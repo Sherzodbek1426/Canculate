@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>My vebside</title>
+        <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="main.css" type="text/css" media="all" />
+    </head>
+    <body>
+        
+        
+        <style type="text/css" media="all">
+        
+        body{
+            background-color:#f1f1f1;
+            font-family: Monospace Sans-Serif;
+        }
+        #operator{
+            background-color: #574b90;
+            color: #fff;
+        }
+        #operator:hover{
+            background-color: #786fa6;
+            color: #fff;
+        }
+        #display{
+            height: 150px;
+            width: 400px;
+            border: 2px solid #000;
+            background-color: #fff;
+            font-size: 50px;
+            border-radius: 15px;
+            box-shadow: none;
+            transform: none;
+        }
+        
+        .form1{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0;
+            background: #b2bec3;
+        }
+        .table{
+            border-radius: 25px;
+            box-shadow: 30px 30px 0 #7f8c8d;
+        }
+        .form1 tr{
+            height: 150px;
+            width:400px;
+            border: 0 ;
+        }
+        .form1 tr td{
+            width: 150px;
+            text-align: center;
+            border: 0;
+        }
+        .form1 tr td input{
+           text-align: center;
+           height: 90px;
+           width: 90px;
+           border: none;
+           border-bottom: 2px solid #fff;
+           border-right: 2px solid #fff;
+           border-radius: 25px;
+           background:#FDA7DF;
+           font-size: 25px;
+           box-shadow: 5px 5px 0 #fff;
+           transition: s;
+           
+        }
+        .form1 tr td input:hover{
+          background-color:#f78fb3;
+          transform: translateY(7px);
+          box-shadow: 2px 2px 0 #fff;
+        }
+        #delete{
+            height: 90px;
+            width: 90px;
+            background-color: #7ed6df;
+            color: #ffff;
+            cursor: pointer;
+            padding: ;
+            border: 0;
+            border-radius: 25px;
+            font: 600 22px 'Monospace';
+            box-shadow: 5px 5px 0 #ff030;
+            transition: s;
+        }
+        #delete:hover{
+            border-radius: 25px;
+            transform: translateY(7px);
+            box-shadow:2.5px 2.5px 0 #dff9fb;
+        }
+    
+            
+        </style>
+        
+        
+        
+        
+        
+            <form class="form1" action="" name="form" method="get" accept-charset="utf-8"> 
+                <table class="table" border="4">
+     <tr>
+           <td colspan="4" >
+                            <input type="text" name="display" id="display"placeholder="search..."disabled="" />
+           </td>
+     </tr>
+                    
+      <tr>
+                 <td>
+                       <input type="button" name="one" id="one" value="1" onclick="form.display.value+='1'" />
+                 </td>
+                  <td>
+                      <input type="button" name="two" id="two" value="2" onclick="form.display.value+='2'" />
+                </td>
+                   <td>
+                        
+                        <input type="button" name="three" id="three" value="3" onclick="form.display.value+='3'" />
+                   </td>
+                  <td >
+                      <input type="button" name="minus" id="operator" value="-" onclick="form.display.value+='-'" />
+                   </td>
+      </tr>
+     <tr>
+              <td>
+                  <input type="button" name="four" id="four" value="4" onclick="form.display.value+='4'" />
+              </td>
+                        
+              <td>
+                     <input type="button" name="five" id="five" value="5" onclick="form.display.value+='5'" />
+             </td>
+                   
+              <td>
+                  <input type="button" name="six" id="six" value="6" onclick="form.display.value+='6'" />
+             </td>
+                   
+            <td>
+                <input type="button" name="plus" id="operator" value="+" onclick="form.display.value+='+'" />
+            </td>
+     </tr>
+    <tr>
+              <td>
+                  <input type="button" name="seven" id="seven" value="7" onclick="form.display.value+='7'" />
+            </td>
+                        
+           <td>
+               <input type="button" name="eight" id="eight" value="8" onclick="form.display.value+='8'" />
+             </td>
+                   
+           <td>
+    <input type="button" name="nine" id="nine" value="9" onclick="form.display.value+='9'"/>
+          </td>
+                   
+          <td>
+                <input type="button" name="clear" id="delete" value="c" onclick="form.display.value=''" />
+          </td>
+      </tr>
+       <tr>
+              <td>
+       <input type="button" name="" id="operator" value="÷" onclick="form.display.value+='÷'" />
+              </td>
+         
+             <td>
+                 <input type="button" name="/" id="operator" value="/" onclick="form.display.value+='/'" />
+             </td>
+              <td>
+  <input type="button" name="×" id="operator" value="×" onclick="form.display.value+='×'" />
+             </td>
+                   
+                <td>
+<input type="button" name="doit" id="delete" value="="
+onclick="form.display.value = eval(form.display.value)"/>
 
+                  </td>
+                    
+                      </tr>    
+                </table>
+          </form>
+    </body>
+</html
